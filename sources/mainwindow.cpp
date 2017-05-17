@@ -211,7 +211,7 @@ void MainWindow::on_startBt_clicked()
     {
         camera = cvCreateCameraCapture(0);
         assert(camera);
-        startTimer(100);  // 0.1-second timer
+        startTimer(50);  // 0.1-second timer
         //ui->httpEd->setText("webcam-walah");
     }
     else if (ui->httpRb->isChecked())
@@ -223,7 +223,7 @@ void MainWindow::on_startBt_clicked()
         //camera = cvCaptureFromFile("rtsp://192.168.1.99:554/live.sdp");
         //camera = cvCaptureFromFile("http://192.168.1.99/video.mjpg");
         assert(camera);
-        startTimer(100); // 0.1-second timer
+        startTimer(50); // 0.1-second timer
         //ui->httpEd->setText("http-walah");
 
     }
@@ -234,7 +234,7 @@ void MainWindow::on_startBt_clicked()
         const char *c_str2 = ba.data();
         camera = cvCaptureFromFile(c_str2);
         assert(camera);
-        startTimer(100);
+        startTimer(50);
     }
 }
 
